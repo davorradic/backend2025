@@ -8,6 +8,13 @@ class PingController extends Controller
 {
     public function index()
     {
-        return 'pong';
+        $message = 'Pong!';
+        $title = 'Ping';
+        $description = 'This is a description';
+        return view('ping', [
+            'message' => $message,
+            'title' => $title,
+            'description' => $description,
+        ]);
     }
 }
